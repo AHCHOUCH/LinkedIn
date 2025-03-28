@@ -111,7 +111,7 @@ def start_scraping():
                 job_list = []
                 try:
                     job_elements = WebDriverWait(driver, 15).until(
-                        EC.presence_of_all_elements_located((By.CLASS_NAME, "xClRpgOKBlCsqFqUKXZPdCcYXYbSQ"))
+                        EC.presence_of_all_elements_located((By.CLASS_NAME, "FRefeFlyKpKgESdExjXYVxSJAsmknJCzUoReHZZw"))
                     )
                 except Exception as e:
                     print("Job elements not found:", e)
@@ -119,9 +119,9 @@ def start_scraping():
 
                 for job in job_elements:
                     try:
-                        title = job.find_element(By.CLASS_NAME, "ryrLncXWuPIaGVYycuYCzNYRICvlvZmbrjZvw").text
-                        company = job.find_element(By.CLASS_NAME, "JYOiFvKUCfOKQdhEEMNkiIVoqrjgTIZOFwhJmM").text
-                        location_text = job.find_element(By.CLASS_NAME, "thziVonUUlrcARJcxqJqBlflUGRrQeCsNxg").text
+                        title = job.find_element(By.CLASS_NAME, "FsZXlxryKOYYiukGDleuAczaXoRQwjeSrrks").text
+                        company = job.find_element(By.CLASS_NAME, "lhTobqFRnhXjIxsPALxnKZTvtIokoQuCLO").text
+                        location_text = job.find_element(By.CLASS_NAME, "nnOoYztMdggrEcztrGDGSlUMxBgYhtrXQEvk").text
                         link = job.find_element(By.TAG_NAME, "a").get_attribute("href")
                         job_list.append([title, company, location_text, link])
                     except Exception as e:
